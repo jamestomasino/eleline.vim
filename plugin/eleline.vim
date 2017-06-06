@@ -109,11 +109,10 @@ endfunction
 function! MyStatusLine()
 
     if s:gui
-        let l:buf_num = '%1* [B-%n] ❖ %{winnr()} %*'
+        let l:buf_num = '%1* ❖ %{winnr()} %*'
     else
-        let l:buf_num = '%1* %{S_buf_num()} ❖ %{winnr()} %*'
+        let l:buf_num = '%1* ❖ %{winnr()} %*'
     endif
-    let l:tot = '%2*[TOT:%{S_buf_total_num()}]%*'
     let l:fs = '%3* %{S_file_size(@%)} %*'
     let l:fp = '%4* %{S_full_path()} %*'
     let l:git = '%6*%{S_fugitive()}%{S_gitgutter()}%*'
